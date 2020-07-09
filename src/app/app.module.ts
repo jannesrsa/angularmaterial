@@ -6,7 +6,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
-import { MATERIAL_DOCS_ROUTES } from './routes';
+const routes: Routes = [
+  {
+    path: 'demo', loadChildren: () =>
+      import("./demo/demo.module").then(
+        (mod) => mod.DemoModule
+      ),
+  },
+  { path: '**', redirectTo: 'contactmanager' }
+];
 
 @NgModule({
   declarations: [
@@ -15,11 +23,7 @@ import { MATERIAL_DOCS_ROUTES } from './routes';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(MATERIAL_DOCS_ROUTES, {
-      scrollPositionRestoration: 'enabled',
-      anchorScrolling: 'enabled',
-      relativeLinkResolution: 'corrected'
-    }),
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
