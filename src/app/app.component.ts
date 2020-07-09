@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
-  checked = false;
-  indeterminate = false;
-  align = 'start';
-  disabled = false;
-
+  title = 'angularmaterial';
 }
