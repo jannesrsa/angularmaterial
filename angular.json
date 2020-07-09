@@ -124,5 +124,6 @@
         }
       }
     }
-  }
+  },
+  "defaultProject": "angularmaterial"
 }
