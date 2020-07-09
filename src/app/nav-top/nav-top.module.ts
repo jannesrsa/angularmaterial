@@ -1,9 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { MaterialModule } from '../material-module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavTopComponent } from './nav-top.component';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -18,7 +17,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    BrowserModule,
     CommonModule,
     MaterialModule,
     RouterModule.forRoot(routes),
