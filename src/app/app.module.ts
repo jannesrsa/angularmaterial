@@ -1,4 +1,3 @@
-import { NavTopModule } from './nav-top/nav-top.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -30,8 +29,7 @@ const routes: Routes = [
    imports: [
       BrowserModule,
       BrowserAnimationsModule,
-      RouterModule.forRoot(routes),
-      NavTopModule
+      RouterModule.forRoot(routes)
    ],
    providers: [],
    bootstrap: [

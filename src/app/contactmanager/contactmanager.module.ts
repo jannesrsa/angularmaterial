@@ -9,6 +9,7 @@ import { ContactManagerComponent } from './contactmanager-app.component';
 import { MainContentComponent } from './components/maincontent/maincontent.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { NavTopComponent } from './components/nav-top/nav-top.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
@@ -30,6 +31,7 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [
+    NavTopComponent,
     ContactManagerComponent,
     MainContentComponent,
     ToolbarComponent,
