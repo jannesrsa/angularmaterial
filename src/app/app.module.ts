@@ -14,7 +14,7 @@ const routes: Routes = [
             (mod) => mod.DemoModule
          ),
    },
-   { path: '**', redirectTo: 'contactmanager' }
+   { path: '**', redirectTo: 'demo' }
 ];
 
 @NgModule({
