@@ -14,7 +14,13 @@ const routes: Routes = [
             (mod) => mod.DemoModule
          ),
    },
-   { path: '**', redirectTo: 'demo' }
+   {
+      path: 'contactmanager', loadChildren: () =>
+         import("./contactmanager/contactmanager.module").then(
+            (mod) => mod.ContactManagerModule
+         ),
+   },
+   { path: '**', redirectTo: 'contactmanager' }
 ];
 
 @NgModule({
