@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'nav-top',
   templateUrl: './nav-top.component.html',
-  styleUrls: ['./nav-top.component.css']
+  styleUrls: ['./nav-top.component.scss']
 })
 export class NavTopComponent implements OnInit {
 

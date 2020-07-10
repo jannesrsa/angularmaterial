@@ -1,13 +1,20 @@
-<section>
-  <div class="example-button-row">
-    <div class="example-flex-container">
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
 
-      <div class="example-button-container">
-        <button routerLink="" mat-fab color="primary" aria-label="Example icon button with a home icon">
-          <mat-icon>home</mat-icon>
-        </button>
-      </div>
+    <button mat-button routerLink="/" mat-fab color="primary" aria-label="Example icon button with a home icon">
+      <mat-icon>home</mat-icon>
+    </button>
 
-    </div>
-  </div>
-</section>
+    <a mat-button class="docs-button" routerLink="/" aria-label="Angular Material">
+      <img class="docs-angular-logo" src="../../assets/img/SmartObject64@2x.png" alt="SmartObject Tester">
+      <span>SmartObject Tester</span>
+    </a>
+
+    <button mat-button routerLink="/demo/buttons">Demo Buttons</button>
+
+    <button mat-button routerLink="/demo/flexbox">Flex Box</button>
+
+    <button mat-button routerLink="/contactmanager">Contact Managmer</button>
+
+  </mat-toolbar-row>
+</mat-toolbar>
