@@ -13,7 +13,8 @@ export class SidenavComponent implements OnInit {
     matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`);
 
   constructor(zone: NgZone) {
-
+    this.mediaMatcher.addEventListener('change', mql =>
+      zone.run(i => i));
   }
 
   ngOnInit() {
