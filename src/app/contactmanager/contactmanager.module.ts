@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
-import { MaterialModule } from '../material-module'
+import { MaterialModule } from '../material-module';
 
 import { ContactManagerComponent } from './contactmanager-app.component';
 import { MainContentComponent } from './components/maincontent/maincontent.component';
