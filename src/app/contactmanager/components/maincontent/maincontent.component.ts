@@ -16,8 +16,12 @@ export class MainContentComponent implements OnInit {
 
   ngOnInit() {
     console.log('Routed to ID');
+
     this.activedRoute.params.subscribe((params) => {
-      this.userService.selectUser(+params['id']);
+      this.userService.users$.subscribe((users) => {
+        if (users.length == 0) return;
+        this.userService.selectUser(+params['id']);
+      });
     });
   }
 }
