@@ -1,3 +1,4 @@
+import { NewContactComponent } from './components/new-contact/new-contact.component';
 import { NotesComponent } from './components/notes/notes.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UserService } from './services/user.service';
@@ -5,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material-module';
 
 import { ContactManagerAppComponent } from './contactmanager-app.component';
@@ -34,6 +35,7 @@ const routes: Routes = [
     HttpClientModule,
     MaterialModule,
     FlexLayoutModule,
+    ReactiveFormsModule,
     FormsModule,
     RouterModule.forChild(routes),
   ],
@@ -44,6 +46,7 @@ const routes: Routes = [
     ToolbarComponent,
     SidenavComponent,
     NotesComponent,
+    NewContactComponent,
   ],
   providers: [UserService],
 })

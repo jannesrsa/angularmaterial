@@ -2,7 +2,8 @@ import { ContactManagerModule } from './../contactmanager.module';
 import { User } from './../models/user';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, of } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable()
 export class UserService {
@@ -36,5 +37,13 @@ export class UserService {
   selectUser(id: number) {
     console.log('Selected UserId: ' + id);
     this.selectedUser = this.dataStore.users.find((x) => x.id == id);
+  }
+
+  addUser(user: User): Observable<User> {
+    user.id = this.dataStore.users.length + 1;
+    this.dataStore.users.push(user);
+    this._users.next(Object.assign([], this.dataStore).users);
+    this.snackBar.open(`User added: ${user.name}`);
+    return of(user);
   }
 }
