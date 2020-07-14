@@ -22,6 +22,11 @@
         <mat-icon>add</mat-icon>
         <span>New Contact</span>
       </button>
+
+      <button mat-menu-item (click)="toggleTheme.emit()">
+        <mat-icon>format_color_fill</mat-icon>
+        <span>Toggle Theme</span>
+      </button>
     </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>

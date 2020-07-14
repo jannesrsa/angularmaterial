@@ -12,6 +12,8 @@ const SMALL_WIDTH_BREAKPOINT = 720;
   styleUrls: ['./sidenav.component.scss'],
 })
 export class SidenavComponent implements OnInit {
+  isDarkTheme: boolean;
+
   constructor(public userService: UserService, private router: Router) {}
 
   ngOnInit() {
@@ -21,5 +23,9 @@ export class SidenavComponent implements OnInit {
       if (data.length > 0)
         this.router.navigate(['/contactmanager', data[0].id]);
     });
+  }
+
+  toggleTheme(): void {
+    this.isDarkTheme = !this.isDarkTheme;
   }
 }

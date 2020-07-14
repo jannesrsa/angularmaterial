@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NewContactComponent } from '../new-contact/new-contact.component';
 import { User } from '../../models/user';
@@ -20,6 +20,8 @@ export class ToolbarComponent implements OnInit {
     public _snackBar: MatSnackBar,
     private router: Router
   ) {}
+
+  @Output() toggleTheme = new EventEmitter<void>();
 
   ngOnInit() {}
 
