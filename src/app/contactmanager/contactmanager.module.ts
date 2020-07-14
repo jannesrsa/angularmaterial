@@ -1,3 +1,4 @@
+import { NotesComponent } from './components/notes/notes.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UserService } from './services/user.service';
 import { NgModule } from '@angular/core';
@@ -42,6 +43,7 @@ const routes: Routes = [
     MainContentComponent,
     ToolbarComponent,
     SidenavComponent,
+    NotesComponent,
   ],
   providers: [UserService],
 })
