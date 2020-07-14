@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { UserService } from './../../services/user.service';
-import { Component, OnInit } from '@angular/core';
+import { OnInit, Component } from '@angular/core';
 import { User } from '../../models/user';
 
 const SMALL_WIDTH_BREAKPOINT = 720;
@@ -8,19 +8,12 @@ const SMALL_WIDTH_BREAKPOINT = 720;
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.scss']
+  styleUrls: ['./sidenav.component.scss'],
 })
 export class SidenavComponent implements OnInit {
-
-
-  public users$: Observable<User[]>;
-
-  constructor(private userService: UserService) {
-
-  }
+  constructor(public userService: UserService) {}
 
   ngOnInit() {
-    this.users$ = this.userService.getUsers();
+    this.userService.loadAll();
   }
-
 }

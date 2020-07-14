@@ -1,15 +1,23 @@
+import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../models/user';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-maincontent',
   templateUrl: './maincontent.component.html',
-  styleUrls: ['./maincontent.component.scss']
+  styleUrls: ['./maincontent.component.scss'],
 })
 export class MainContentComponent implements OnInit {
-
-  constructor() { }
+  constructor(
+    private activedRoute: ActivatedRoute,
+    public userService: UserService
+  ) {}
 
   ngOnInit() {
+    console.log('Routed to ID');
+    this.activedRoute.params.subscribe((params) => {
+      this.userService.selectUser(+params['id']);
+    });
   }
-
 }

@@ -1,3 +1,20 @@
-<mat-card>
-  <h1>Main content</h1>
+<mat-spinner *ngIf="!userService.selectedUser"></mat-spinner>
+
+<mat-card *ngIf="userService.selectedUser">
+  <mat-card-header>
+    <mat-icon
+      mat-card-avatar
+      svgIcon="{{ userService.selectedUser.avatar }}"
+    ></mat-icon>
+    <mat-card-title>{{ userService.selectedUser.name }}</mat-card-title>
+    <mat-card-subtitle>{{
+      userService.selectedUser.birthDate | date
+    }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>
+      {{ userService.selectedUser.bio }}
+    </p>
+  </mat-card-content>
 </mat-card>
